@@ -60,80 +60,102 @@ public final class DiagnoseView extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         userDirTA = new javax.swing.JTextArea();
+        jToolBar1 = new javax.swing.JToolBar();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Meno, verzia a architektúra OS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 180, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 180, 30));
 
         javaTF.setEditable(false);
-        jPanel1.add(javaTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 390, -1));
+        jPanel1.add(javaTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 390, -1));
 
         osTF.setEditable(false);
-        jPanel1.add(osTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 390, -1));
+        jPanel1.add(osTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 390, -1));
 
         userTF.setEditable(false);
-        jPanel1.add(userTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 390, -1));
+        jPanel1.add(userTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 390, -1));
 
         jLabel2.setText("Verzia Javy");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 180, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 180, 30));
 
         jLabel3.setText("Meno používateľa");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 180, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 180, 30));
 
         jLabel4.setText("Názov používateľského adresára");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 180, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 180, 30));
 
         jLabel5.setText("Veľkosť používateľského adresára");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 180, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 180, 30));
 
         jLabel6.setText("Voľná pamäť v JVM pre-alloc");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 180, 30));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 180, 30));
 
         jLabel7.setText("Celková dostupná pamäť pre JVM");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 180, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 180, 30));
 
         jLabel8.setText("Dostupná pamäť pre JVM");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 180, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 180, 30));
 
         totalMemTF.setEditable(false);
-        jPanel1.add(totalMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 390, -1));
+        jPanel1.add(totalMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 390, -1));
 
         userDirSizeTF.setEditable(false);
-        jPanel1.add(userDirSizeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 390, -1));
+        jPanel1.add(userDirSizeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 390, -1));
 
         freeMemTF.setEditable(false);
-        jPanel1.add(freeMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 390, -1));
+        jPanel1.add(freeMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 390, -1));
 
         usableMemTF.setEditable(false);
-        jPanel1.add(usableMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 390, -1));
+        jPanel1.add(usableMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 390, -1));
 
-        jLabel9.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("sansserif", 1, 30)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("JAVA Diagnoser");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 16, 520, 60));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, 600, 60));
 
         userDirTA.setColumns(20);
         userDirTA.setRows(5);
         jScrollPane1.setViewportView(userDirTA);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 390, 80));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 390, 80));
+
+        jToolBar1.setFloatable(false);
+        jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jToolBar1.setRollover(true);
+
+        jButton1.setText("Obnoviť");
+        jButton1.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton1MouseReleased(evt);
+            }
+        });
+        jToolBar1.add(jButton1);
+
+        jPanel1.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 600, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+        // TODO add your handling code here:
+        displayDiagnose();
+    }//GEN-LAST:event_jButton1MouseReleased
 
     /**
      * @param args the command line arguments
@@ -172,6 +194,7 @@ public final class DiagnoseView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField freeMemTF;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -183,6 +206,7 @@ public final class DiagnoseView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JTextField javaTF;
     private javax.swing.JTextField osTF;
     private javax.swing.JTextField totalMemTF;
