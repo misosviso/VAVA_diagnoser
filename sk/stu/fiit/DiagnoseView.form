@@ -149,7 +149,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="completeMemTF">
+        <Component class="javax.swing.JTextField" name="totalMemTF">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
@@ -179,7 +179,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="memTF">
+        <Component class="javax.swing.JTextField" name="usableMemTF">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>

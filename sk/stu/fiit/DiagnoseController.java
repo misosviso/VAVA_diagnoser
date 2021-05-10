@@ -14,6 +14,20 @@ import java.text.DecimalFormat;
  */
 public class DiagnoseController {
     
+    private String formatSize(long size){
+        DecimalFormat df = new DecimalFormat("0.00");     
+        float kBsize = (float)size / (float)1024;
+        float MBsize = (float)kBsize / (float)1024;
+        float GBsize = (float)MBsize / (float)1024;
+        if(GBsize > 1){
+            return df.format(GBsize) + "GB";
+        } else if(MBsize > 1){
+            return df.format(MBsize) + "MB";
+        } else{
+            return df.format(kBsize) + "kB";
+        }
+    }
+    
     public String getOS(){
         String OS = System.getProperty("os.name");
         String version = System.getProperty("os.version");
@@ -35,18 +49,25 @@ public class DiagnoseController {
     
     public String getDirSize(){
         String dir = System.getProperty("user.dir");
-        java.io.File file = new java.io.File(dir);
+        File file = new File(dir);
         long size = file.length();
-        DecimalFormat df = new DecimalFormat("0.00");     
-        float kBsize = (float)size / (float)1024;
-        float MBsize = (float)kBsize / (float)1024;
-        float GBsize = (float)MBsize / (float)1024;
-        if(GBsize > 1){
-            return df.format(GBsize) + "GB";
-        } else if(MBsize > 1){
-            return df.format(MBsize) + "MB";
-        } else{
-            return df.format(kBsize) + "kB";
-        }
+        return formatSize(size);
+    }
+    
+    public String getJVMTotal(){
+        Runtime runtime = Runtime.getRuntime();
+        long size = runtime.totalMemory();
+        return formatSize(size);
+    }
+    
+    public String getJVMUsable(){
+       long size = new File("c:").getUsableSpace();
+        return formatSize(size); 
+    }
+    
+    public String getJVMFree(){
+        Runtime runtime = Runtime.getRuntime();
+        long size = runtime.freeMemory();
+        return formatSize(size);
     }
 }

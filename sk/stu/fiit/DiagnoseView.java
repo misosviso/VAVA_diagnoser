@@ -27,6 +27,9 @@ public final class DiagnoseView extends javax.swing.JFrame {
         javaTF.setText(controller.getJavaVersion());
         userDirTA.setText(controller.getDir());
         userDirSizeTF.setText(controller.getDirSize());
+        totalMemTF.setText(controller.getJVMTotal());
+        usableMemTF.setText(controller.getJVMUsable());
+        freeMemTF.setText(controller.getJVMFree());
     }
 
     /**
@@ -50,10 +53,10 @@ public final class DiagnoseView extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        completeMemTF = new javax.swing.JTextField();
+        totalMemTF = new javax.swing.JTextField();
         userDirSizeTF = new javax.swing.JTextField();
         freeMemTF = new javax.swing.JTextField();
-        memTF = new javax.swing.JTextField();
+        usableMemTF = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         userDirTA = new javax.swing.JTextArea();
@@ -95,8 +98,8 @@ public final class DiagnoseView extends javax.swing.JFrame {
         jLabel8.setText("Dostupná pamäť pre JVM");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 180, 30));
 
-        completeMemTF.setEditable(false);
-        jPanel1.add(completeMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 390, -1));
+        totalMemTF.setEditable(false);
+        jPanel1.add(totalMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 390, -1));
 
         userDirSizeTF.setEditable(false);
         jPanel1.add(userDirSizeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 390, -1));
@@ -104,8 +107,8 @@ public final class DiagnoseView extends javax.swing.JFrame {
         freeMemTF.setEditable(false);
         jPanel1.add(freeMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 390, -1));
 
-        memTF.setEditable(false);
-        jPanel1.add(memTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 390, -1));
+        usableMemTF.setEditable(false);
+        jPanel1.add(usableMemTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 390, -1));
 
         jLabel9.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -168,7 +171,6 @@ public final class DiagnoseView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField completeMemTF;
     private javax.swing.JTextField freeMemTF;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -182,8 +184,9 @@ public final class DiagnoseView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField javaTF;
-    private javax.swing.JTextField memTF;
     private javax.swing.JTextField osTF;
+    private javax.swing.JTextField totalMemTF;
+    private javax.swing.JTextField usableMemTF;
     private javax.swing.JTextField userDirSizeTF;
     private javax.swing.JTextArea userDirTA;
     private javax.swing.JTextField userTF;
